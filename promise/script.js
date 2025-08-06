@@ -75,3 +75,59 @@ async function consumerPromiseFive(){
     } 
 }
 consumerPromiseFive()
+
+
+const cart = ['shoes' , 'cloth' , 'men']
+
+const prmoise = createOrder(cart)  // i am create a funcaiton here which is call the api and add the item to the cart and return the orderId 
+
+console.log(prmoise);  // this time the promise is pending and it show promise pending because the createOrder take 5 sec to give response so that time the promise in the pending state 
+
+promise.then(function (orderId){
+ console.log(orderId);  // after the promise is resolve it return the orderid whcih si receive directly in thsi funcation because we make chain of it promise.then 
+ return orderId
+})
+.then((orderId)=> {
+    return proceedToPayment(orderId)
+})
+.then((paymentInfo) => {
+     console.log(paymentInfo);
+     
+}).catch((eror)=> {
+     console.log(error);
+     
+})
+
+
+function createOrder(cart){
+    // first we make a promise to check how behind the scene the api is working and return the promise error and the data suppose this is the api which i am call before in the top 
+   const pr = new Promise(function (resolve , reject){
+
+    // chekc the cart is valid or if not the we gives and error 
+      if(!validateCart(cart)){
+        let error = new Error('Cart is not valid')
+         reject(error)
+      }
+      const orderId = '53465'
+
+      if(orderId){
+        // if every thing is done we return the order id and resolve the promiese it 
+        setTimeout(() => {
+            resolve(orderId)  // it take 5 sec to resolve it and that time the createORder wait to recieve the data
+        } , 5000)
+      }
+
+   })
+
+   return pr  // return the promise which is recive in createOrder funcation with fulfiled and data
+}
+
+function validateCart(cart){
+    return true
+}
+
+function proceedToPayment(orderId){
+    return new Promise((resolve , reject) => {
+         resolve('Payment sucessfull done')
+    })
+}
