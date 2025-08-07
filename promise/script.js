@@ -131,3 +131,88 @@ function proceedToPayment(orderId){
          resolve('Payment sucessfull done')
     })
 }
+
+// ******************************* PROMISE API METHODS ************************
+
+// 1. PROMISE.ALL : -  
+                       // when we need to call multiple api pararally so we use this method it we fetch 10 user details at a time then we use this method it takes an array or api or promises and return the value of the api in the form or array like if we pass and array in which 3 api present then it return an array in which all the three api data were present
+
+      // NOTE : - 
+                    // WHEN YOU USE THIS METHOD IT CALL ALL THE API PARARALLY NOT LIKE CALL FIRST API THEN SECOND IT CALL ALL THE API AND IT WAIT IF THE EVERY API SUCESSUFFLY RESOLVE THEN IT RETURN THE RESULT NOT LIKE IF FIRST RESOLVE THEN RETURN THE DATA NOT WHEN THE EVERY API RESOLVE AFTER IT RETURN THE RESULT ARRAY SO IT TAKE TIME = THE HIGHEST TIME TAKES API MEAN IF IN THE ARRAY FIRST TAKE 2 SEC TO RESOLVE AND SECOND 1 SEC THIRD 5 SEC THEN IT RETURN THE DATA AFTER 5S NOT IN 1 OR 2 SEC IT TAKE HIGHEST TIME API CALL TIME 
+
+     // NOTE : -   
+                  // UPER I AM TALK IT RETURN THE DATA IF ALL THE API IS RESOLVE BUT WHAT IF ANY API REJECTED OT GIVES US ERROR THEN THIS METHOD GIVES US ERROR IF ANY OF THE API GIVE ERROR IT THROW AN ERROR IMMEDITELY NOT MATTER HOW MUCH API RESOLVE IF ANY ONE RETURN ERROR IT THORW ERROR LIKE IF WE HAVE 5 API 4 API RESOLVE OR 5TH API REJECTED OR ERROR THEN IT IMMEDITELY THROW THE ERROR AND RETURN THE ERROR NOT THE 4 API RESULT OR  1 ERROR                
+
+//  EX : -     
+            const p1 = new Promise((resolve , reject ) => {
+                 setTimeout(() => resolve('p1 resolve'), 3000)
+            })
+            const p2 = new Promise((resolve , reject ) => {
+                //  setTimeout(() => resolve('p2 resolve'), 1000)
+                 setTimeout(() => reject('p2 fail'), 1000)
+            })
+            const p3 = new Promise((resolve , reject ) => {
+                 setTimeout(() => resolve('p3 resolve'), 5000)
+            })
+
+            Promise.all([p1 , p2, p3])
+            .then((res) => {
+                console.log(res)
+            })
+            .catch((error) => {
+                console.error(error)
+                
+            })
+ 
+// 2. PROMISE.ALLSETTELED : - 
+                               // this method is same as promise.all but in but in this when call multiple api and any of them rejected or gives error then it not throw the error it wait for other api calls and after every api call it return the data if the api call is gives error then it return erorr if resolve the return data it call all the api and wait for all the api response no matter the api is rejected or resolve it wait for all the api response like i have 5 api the 2 will resolve and 3 api rejected then it not throw the error it run 4 or 5 api and after all the api run it return an array in this if erorr comed it return error if not then result same a promise.all but change in error handling
+
+//  EX : -     
+            const k1 = new Promise((resolve , reject ) => {
+                 setTimeout(() => resolve('p1 resolve'), 3000)
+            })
+            const k2 = new Promise((resolve , reject ) => {
+                //  setTimeout(() => resolve('p2 resolve'), 1000)
+                 setTimeout(() => reject('p2 fail'), 1000)
+            })
+            const k3 = new Promise((resolve , reject ) => {
+                 setTimeout(() => resolve('p3 resolve'), 5000)
+            })
+
+            Promise.allSettled([k1 , k2, k3])
+            .then((res) => {
+                console.log(res)
+            })
+            .catch((error) => {
+                console.error(error)
+                
+            })
+                               
+                               
+// 3. PROMISE.RACE : - 
+                          // this method take an array of api and return the first promise to resolve or rejecte like if have 3 api first take 3 sec secodn take 5sec third take 2sec then when the first api resolve or reject it return it and the first api resolve it 3 so ite reutrn the result mean it return the fastest api result first come first return no matter is resolve ot reject if reject then return error 
+                          
+//    EX : -                           
+
+            Promise.race([k1 , k2, k3])
+            .then((res) => {
+                console.log(res)
+            })
+            .catch((error) => {
+                console.error(error)
+                
+            })
+                          
+                    
+// 4. PROMISE.ANY : -    
+                        // this will take an array of promises and wait for first sucess or resolve promises like it onlt return the result of first resolve api or promises like if we have three api first take 1s second take 2s third take 3sec and the first got rejected and the second also get rejected and third is resolved then it return third because it only return the first resolved promises data in the race method it return the first promises data no matter resolve or reject in this not return reject promise only return first reoslve promises data if all the promises will rejected it will give error 
+
+//  EX : - 
+              Promise.any([k1 , k2, k3])
+            .then((res) => {
+                console.log(res)
+            })
+            .catch((error) => {
+                console.error(error)
+                
+            })
