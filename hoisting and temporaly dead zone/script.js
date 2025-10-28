@@ -6,7 +6,7 @@
 
 
 //    EX :-  console.log(a);
-//         var a = 10 
+//         var a = 10
 
 
         // we log the varible even this varible is not declare but when the code is run a global excutaion context is created and in this varible get the memory but in the first its store all the varible undefined and then when the code excute it decalre the its original value so when we not decalre the vaible in the first in the memory a name varible is created with the value of undefined and when we reach varible a its assing its orignal value so its log undefined at this time not give error 
@@ -26,6 +26,7 @@
          
          
     //  **************** temporal dead zone ***************
+
     // The Temporal Dead Zone is the time between the hoisting of a let/const variable and its actual declaration in code.
     // temporal dead zone mean when the let and const varible declared and its store in the diffrent memory as undefined the time between its undefined and not get the origianl value mean not decalre is known as temporal dead zone mean the time in which the vaible is undefied is know as temporal dead zone 
                 
