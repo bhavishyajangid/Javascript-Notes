@@ -6,7 +6,7 @@
 
 
 //    EX :-  console.log(a);
-//         var a = 10
+//         var a = 10 ; 
 
 
         // we log the varible even this varible is not declare but when the code is run a global excutaion context is created and in this varible get the memory but in the first its store all the varible undefined and then when the code excute it decalre the its original value so when we not decalre the vaible in the first in the memory a name varible is created with the value of undefined and when we reach varible a its assing its orignal value so its log undefined at this time not give error 
