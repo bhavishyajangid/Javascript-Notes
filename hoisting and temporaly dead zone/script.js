@@ -14,7 +14,7 @@
         // NOTE : -  BUT THERE IS A CATCH THIS IS ONLY WORK WITH VAR KEYWORD NOT WITH LET AND CONST LETS SEE WHY
 
 
-        // **************** LET AND CONST ****************
+        // **************** LET AND CONST ***************
 
 
         // EX : -   
