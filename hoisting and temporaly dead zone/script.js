@@ -11,7 +11,7 @@
 
         // we log the varible even this varible is not declare but when the code is run a global excutaion context is created and in this varible get the memory but in the first its store all the varible undefined and then when the code excute it decalre the its original value so when we not decalre the vaible in the first in the memory a name varible is created with the value of undefined and when we reach varible a its assing its orignal value so its log undefined at this time not give error 
 
-        // NOTE : -  BUT THERE IS A CATCH THIS IS ONLY WORK WITH VAR KEYWORD NOT WITH LET AND CONST LETS SEE WHY 
+        // NOTE : -  BUT THERE IS A CATCH THIS IS ONLY WORK WITH VAR KEYWORD NOT WITH LET AND CONST LETS SEE WHY
 
 
         // **************** LET AND CONST ****************
