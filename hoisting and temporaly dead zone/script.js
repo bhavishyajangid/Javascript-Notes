@@ -28,5 +28,5 @@
     //  **************** temporal dead zone ***************
 
     // The Temporal Dead Zone is the time between the hoisting of a let/const variable and its actual declaration in code.
-    // temporal dead zone mean when the let and const varible declared and its store in the diffrent memory as undefined the time between its undefined and not get the origianl value mean not decalre is known as temporal dead zone mean the time in which the vaible is undefied is know as temporal dead zon
+    // temporal dead zone mean when the let and const varible declared and its store in the diffrent memory as undefined the time between its undefined and not get the origianl value mean not decalre is known as temporal dead zone mean the time in which the vaible is undefied is know as temporal dead zone
                 
