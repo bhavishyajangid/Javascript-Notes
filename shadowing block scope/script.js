@@ -40,7 +40,7 @@
                 }    
           console.log(a);  // output 10
 
-        //   because the first let is store in the script scope not in the global scope and the second let is stored in the diffrent scope which is not global scope not script scope this is block scope in so in this block we log a this print from block scope or outer print from the script scoep same with const 
+        //   because the first let is store in the script scope not in the global scope and the second let is stored in the diffrent scope which is not global scope not script scope this is block scope in so in this block we log a this print from block scope or outer print from the script scoep same with const
 
         
           
