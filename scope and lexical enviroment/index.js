@@ -13,16 +13,16 @@
 
 // Example:
 
-function a() {
-    var x = 10;
-    function b() {
-        console.log(x); // ✅ 10
-    }
-    b();
-}
+// function a() {
+//     var x = 10;
+//     function b() {
+//         console.log(x); // ✅ 10
+//     }
+//     b();
+// }
 
-a();
-console.log(x); // ❌ ReferenceError: x is not defined
+// a();
+// console.log(x); // ❌ ReferenceError: x is not defined
 
 // ------------------ EXPLANATION ------------------
 
@@ -55,4 +55,13 @@ console.log(x); // ❌ ReferenceError: x is not defined
 
 
 // when a function is invoked a new execution context is created and in this execution context a new lexical environment is created and this lexical environment has two part one is local memory and another is reference to its parent lexical environment and this parent lexical environment is the place where the function is defined not where it is called so when we try to access any varible inside the function it first look in its local memory if it not found then it look in its parent lexical environment if it found then it return the value if not found then it look in its parent lexical environment and this process continue until it reach to global object if it not found in global object also then it give error that varible is not defined so this process of looking up for varible is known as scope chain and this scope chain work with the help of lexical environment and this is how scope and lexical environment work together in JavaScript.
+
+var a = 1;
+function test() {
+  console.log(a);
+  a = 5;
+  console.log(a);
+  var a;
+}
+test();
 

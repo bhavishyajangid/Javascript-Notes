@@ -91,17 +91,19 @@
 
 
 // find the given two arrya is same or not 
-function arraySame (arr1 , arr2) {
+// function arraySame (arr1 , arr2) {
  
-    let result = false
-    if(arr1.length === arr2.length){
-     result =   arr1.reduce((acc , item , arr , i) =>  {
-            return item === arr2[i] ? true : false
-        } , false)
-    }
-    return result
-}
+//     let result = false
+//     if(arr1.length === arr2.length){
+//      result =   arr1.reduce((acc , item , arr , i) =>  {
+//             return item === arr2[i] ? true : false
+//         } , false)
+//     }
+//     return result
+// }
 
-let result = arraySame([2,4,5] , [2,4,5])
-console.log(result);
+// let result = arraySame([2,4,5] , [2,4,5])
+// console.log(result);
+
+
 
