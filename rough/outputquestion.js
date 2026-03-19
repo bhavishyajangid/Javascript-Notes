@@ -46,7 +46,7 @@
 // ]
 
 
-// let result = students.filter((item) => item.marks > 60 ).reduce((acc ,item) => {
+// let result = students.filter((item) => item.marks > 60 ).reduce((acc ,item)=> {
 //            return acc + item.marks
 // } , 0)
 
