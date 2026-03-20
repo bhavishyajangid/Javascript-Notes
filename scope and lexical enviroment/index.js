@@ -9,7 +9,7 @@
 // A Lexical Environment is created  when ever a excution contenxt or a function is invoked.
 // It contains two parts:
 //    a. Local memory (variables and functions declared inside the function)
-//    b. A reference to its parent Lexical Environment (where the function was defined, not called
+//    b. A reference to its parent Lexical Environment (where the function was defined, not calle
 
 // Example:
 
