@@ -249,8 +249,8 @@ sum(arguments); // Here, arguments are the values passed to the function when it
 
 
 
-let arr = [1,2,3,4,5,6,];
+// let arr = [1,2,3,4,5,6,];
 
-for(let i of arr){
-    console.log(i);
-}
+// for(let i of arr){
+//     console.log(i);
+// }
