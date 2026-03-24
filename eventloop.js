@@ -36,8 +36,7 @@
 
 
 // EX : 2 
-console.log("start");
-
+console.log("start")
 setTimeout(function timeout() {
   console.log("timeout print");
 }, 5000);
