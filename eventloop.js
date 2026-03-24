@@ -33,3 +33,93 @@
 
 
 // NOTE : -  if not understand go to loupe website where it show how its work completey
+
+
+// EX : 2 
+console.log("start");
+
+setTimeout(function timeout() {
+  console.log("timeout print");
+}, 5000);
+
+fetch("https://jsonplaceholder.typicode.com/todos/1")
+  .then(function fetchData(data) {
+    console.log("fetch data");
+  });
+
+console.log("end");
+
+// ✅ Explanation of the Code (Concept + Flow)
+
+// When this code runs, JavaScript first creates a Global Execution Context and starts executing line by line (synchronous first).
+
+// console.log("start") runs immediately → prints start
+// setTimeout is encountered:
+// JavaScript sends this to Web APIs and starts a 5-second timer
+// The callback function is not executed now, it will go to the callback queue after the timer finishes
+// fetch is called:
+// It also goes to Web APIs and starts the API request
+// When the response is received (assume in 200ms), its .then() callback goes to the microtask queue
+// console.log("end") runs → prints end
+
+// Now the synchronous code is finished and the call stack becomes empty.
+
+// At this point, the Event Loop starts working:
+
+// It first checks the microtask queue (high priority)
+// fetchData is present → pushed to call stack → prints fetch data
+// Then it checks the callback queue (low priority)
+// After 5 seconds, timeout function is there → pushed to call stack → prints timeout print
+// ✅ Final Output
+// start
+// end
+// fetch data
+// timeout print
+// ✅ Core Concepts (Easy to Remember)
+// 📌 Event Loop
+
+// The event loop continuously checks:
+
+// If the call stack is empty
+// Then it moves tasks from queues to the stack
+
+// 👉 It always gives priority to microtasks first, then callback tasks.
+
+// 📌 Microtask Queue
+
+// This queue stores high priority tasks.
+
+// Examples:
+
+// Promises (.then)
+// fetch
+
+// 👉 These tasks run immediately after synchronous code finishes, before any timer or event.
+
+// 📌 Callback Queue (Task Queue)
+
+// This queue stores low priority tasks.
+
+// Examples:
+
+// setTimeout
+// setInterval
+// DOM events
+
+// 👉 These run only after microtasks are completed
+
+//         ┌──────────────┐
+//         │ Call Stack   │
+//         └──────┬───────┘
+//                │
+//                ▼
+//         ┌──────────────┐
+//         │ Event Loop   │
+//         └──────┬───────┘
+//                │
+//      ┌─────────┴─────────┐
+//      ▼                   ▼
+// ┌──────────────┐   ┌──────────────┐
+// │ Microtask Q  │   │ Callback Q   │
+// │ (High Pri.)  │   │ (Low Pri.)   │
+// └──────────────┘   └──────────────┘
