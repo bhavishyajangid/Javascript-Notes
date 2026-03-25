@@ -131,9 +131,37 @@ sum(arguments); // Here, arguments are the values passed to the function when it
 
 
 
+// ********************* higher order function ***********************
+high order funcation mean take a funcation as argument and return a funcation is called higher order funcation 
+
+ex : 
+        function a(){
+            console.log("this is a function a");
+        }
+
+        function b(func){
+            console.log("this is function b");
+            func();
+        }
+
+        b(a); // Output: this is function b
+
+// **************** diffrence between high order function and callback function ****************
+
+// A higher-order function is a function that takes another function as an argument or returns a function as its result. A callback function is a specific type of function that is passed as an argument to another function and is executed after some operation is completed. In other words, all callback functions are higher-order functions, but not all higher-order functions are callbacks. Higher-order functions can be used for various purposes beyond just callbacks, such as creating new functions or implementing functional programming patterns.
 
 
 
+function a(){
+            console.log("this is a function a"); // a is a callback funcation because it passed as an argument to the funcation b and run after or later some time 
+        }
+
+        function b(func){
+            console.log("this is function b");  // b is a high order funcation because it take a funcation as argument and return a funcation
+            func();
+        }
+
+        b(a); 
 
 
 
