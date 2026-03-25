@@ -152,16 +152,16 @@ ex :
 
 
 
-// function a(){
-//             console.log("this is a function a"); // a is a callback funcation because it passed as an argument to the funcation b and run after or later some time 
-//         }
+function a(){
+            console.log("this is a function a"); // a is a callback funcation because it passed as an argument to the funcation b and run after or later some time 
+        }
 
-//         function b(func){
-//             console.log("this is function b");  // b is a high order funcation because it take a funcation as argument and return a funcation
-//             func();
-//         }
+        function b(func){
+            console.log("this is function b");  // b is a high order funcation because it take a funcation as argument and return a funcation
+            func();
+        }
 
-//         b(a); 
+        b(a); 
 
 
 
