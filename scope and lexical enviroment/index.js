@@ -57,8 +57,18 @@
 // when a function is invoked a new execution context is created and in this execution context a new lexical environment is created and this lexical environment has two part one is local memory and another is reference to its parent lexical environment and this parent lexical environment is the place where the function is defined not where it is called so when we try to access any varible inside the function it first look in its local memory if it not found then it look in its parent lexical environment if it found then it return the value if not found then it look in its parent lexical environment and this process continue until it reach to global object if it not found in global object also then it give error that varible is not defined so this process of looking up for varible is known as scope chain and this scope chain work with the help of lexical environment and this is how scope and lexical environment work together in JavaScript
 
 
+// Final Understanding (Golden Rule)
 
+// 👉 var → function scoped → stored once per function
+// 👉 let & const → block scoped → stored per block
 
+// 🧠 One Line Answer (Interview)
+
+// Inside a function, var is stored in the function’s variable environment, while let and const are stored in the lexical environment and respect block scope.
+
+// Function Lexical Environment
+//    ├── Variable Environment → var
+//    └── Lexical Environment → let, const (block-wise)
 
 
 
