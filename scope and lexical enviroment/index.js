@@ -70,6 +70,39 @@
 //    ├── Variable Environment → var
 //    └── Lexical Environment → let, const (block-wise)
 
+function test() {
+  {
+    var a = 10;
+    let b = 20;
+  }
+
+  console.log(a); // ✅ 10
+  console.log(b); // ❌ Error
+}
+
+test();
+
+
+// Yes, every block {} creates its own lexical environment — but only for let and const.
+
+
+
+// let globalVar = 1;
+
+// {
+//   let blockVar = 2;
+//   console.log(globalVar); // ✅ can access parent
+// }
+
+// console.log(blockVar); // ❌ cannot access child
+
+// Global Lexical Environment
+//    ↓
+// Block Lexical Environment
+
+// 👉 Block creates a lexical environment, but only let and const live inside it.
+// 👉 var ignores block and lives in function/global scope.
+
 
 
 

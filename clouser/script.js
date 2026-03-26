@@ -8,7 +8,6 @@
         //          let a = 10;
         //          function innerFun(){
         //             console.log(a);
-                    
         //          }
         //          innerFun()
         //    }
