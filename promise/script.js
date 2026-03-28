@@ -22,19 +22,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 let promise2 = new Promise((resolve , reject )=>{
     setTimeout(()=>{
         // console.log("promise maked");
