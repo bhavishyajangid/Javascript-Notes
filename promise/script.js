@@ -3,7 +3,7 @@
 // promises resolve our useCallback hell problem and also solve the inversation of control problem
 
 // 1. what is promise 
-// a promise is an object which is used to handle the asynchronous code in js and it return a empty object first and after some time when we get the data form the api or other thing it pass this data into this object 
+// A Promise in JavaScript is an object that represents the result of an asynchronous operation — something that will complete in the future (either successfully or with an error). 
 
 
 // ex : 
