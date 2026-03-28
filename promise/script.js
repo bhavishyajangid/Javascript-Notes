@@ -1,3 +1,40 @@
+// *********************** Promises **********************
+
+// promises resolve our useCallback hell problem and also solve the inversation of control problem
+
+// 1. what is promise 
+// a promise is an object which is used to handle the asynchronous code in js and it return a empty object first and after some time when we get the data form the api or other thing it pass this data into this object 
+
+
+// ex : 
+
+// const promise = createOrder(cart)  // i am create a funcaiton here which is call the api and add the item to the cart and return the orderId
+
+// so we have an api createOrder and we dont know how much time this api takes 
+// but we want to get the orderId which is return by this api so when we call this api it return a empty object first and after some time when we get the data form the api or other thing it pass this data into this object and we can access this data using then method of promise like this
+
+// promise.then(function (orderId){})  
+
+
+
+// so we have a .then method in the promise and this then method take a callback function as an argument and this callback function will be called when the promise is resolved when we get the data it automatically run this callback function and this funcation run only once   and the data which is return by the api will be passed as an argument to this callback function so we can access this data in this callback function and we can do some operation on this data like log it or return it or do some other thing with it
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 let promise2 = new Promise((resolve , reject )=>{
     setTimeout(()=>{
         // console.log("promise maked");

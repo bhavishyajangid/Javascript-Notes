@@ -132,9 +132,9 @@ sum(arguments); // Here, arguments are the values passed to the function when it
 
 
 // ********************* higher order function ***********************
-high order funcation mean take a funcation as argument and return a funcation is called higher order funcation 
+// high order funcation mean take a funcation as argument and return a funcation is called higher order funcation 
 
-ex : 
+// ex : 
         function a(){
             console.log("this is a function a");
         }
