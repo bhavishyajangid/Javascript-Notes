@@ -43,4 +43,4 @@ api.addToCart(function(){
     // this is called the callback hell because in this i am use four api and every one dependent on other and this is not maintable and not looking good so when we use nested callback this is knows as callback hell
 
 
-    // 2.  the second reason the inversion of contro mean when we use this callback we dont have control on our code mean when my processToPayment api is fully depeneden on the add to cart api if the api we dont have any controll on it if this is not working if this processThePayment api run two times if the error come we dont  control so this is inversion os condtrol
+    // 2.  the second reason the inversion of contro mean when we use this callback we dont have control on our code mean when my processToPayment api is fully depeneden on the add to cart api if the api we dont have any controll on it if this is not working if this processThePayment api run two times if the error come we dont  control so this is inversion os condtro
