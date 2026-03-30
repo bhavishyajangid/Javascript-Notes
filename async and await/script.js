@@ -195,3 +195,4 @@ myData()
 // console.log(data2)
 
 // now it only take 10 sec to resolve or give the data 
+
