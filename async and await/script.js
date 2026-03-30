@@ -135,3 +135,63 @@ myData()
 
 // when we create the await we thing the code is wait to resolve the promise but if the code is wait then the other is not work at that time because and are all code excutation is stop and are code is freezed and we block the main thread and js is single threded so we dont block main thread so how js handle this await when the mydata is called is come to await and when i see the await it suspend  that async funcation and pop out the call stack and dont block the main thread and when the promise is resolved it again push the funcation in the call stack and go next and again it show the await so its again suspend the funcation and pop out the function from the call stack and when the promise is resolved it again push the funcation into the callstack so like this the async and await is worked  
 
+
+
+let p1 = fetch ("take 10 sec to resolved")
+let data1 = await p1.json()
+console.log(data1)
+let p2 = fetch ("take 5 sec to resolved")
+let data2 = await p2.json()
+console.log(data2)
+
+// ************** interview question *******************
+
+
+
+ let p = new Promise((resolve, reject) => {
+     setTimeout(() => {
+           resolve("p1 is resolved")
+     } , 5000)
+})
+
+let p2 = new Promise((resolve, reject) => {
+     setTimeout(() => {
+           resolve("p2 is resolved")
+     } , 10000)
+})
+
+async function myData(){
+    let val1 = await p1
+    console.log(val1)
+
+    let val2 = await p2
+    console.log(val2)
+}   
+
+myData()
+
+// OUTPUT : "p1 is resolved"  after 5sec
+        //  "p2 is resolved"   after 10 sec 
+        // HERE IF THIS HAPPEN THEN TELL ME WHAT HAPPEN HERE 
+
+
+
+//         let p1 = fetch ("take 10 sec to resolved")
+// let data1 = await p1.json()
+// console.log(data1)
+// let p2 = fetch ("take 5 sec to resolved")
+// let data2 = await p2.json()
+// console.log(data2)
+
+// so here the first api take 10 sec and then json convert data in json and then the second api call and take 5 sec and again convert into js so total time take 15 sec why in this it take 15 sec in the promises before it take 10sec so the promblemt is the await data.json() it block the parallel call the promises or the api before it have the data is dont excute the next api call so if we need to call it parallely then we need to convert it after 
+
+// ex : 
+
+//   let p1 = fetch ("take 10 sec to resolved")
+// let p2 = fetch ("take 5 sec to resolved")
+// let data1 = await p1.json()
+// console.log(data1)
+// let data2 = await p2.json()
+// console.log(data2)
+
+// now it only take 10 sec to resolve or give the data 
