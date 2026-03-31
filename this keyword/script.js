@@ -37,4 +37,4 @@ function myFunc(){
 myFunc() // output  undefined
 window.myFunc() // output will be window object because we call the funcation with the window object so this keyword refer to the window object
 
-// if we call the funcation with the object refrence the it target the window object
+// if we call the funcation with the object refrence the it target the window objec
