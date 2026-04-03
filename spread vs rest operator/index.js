@@ -7,7 +7,7 @@
     // 👉 But meaning is different based on usage
 
     // 🔹 1. Spread Operator (Expand)
-    // 👉 Definition:
+    // 👉 Definition:The spread operator takes a collection and spreads its values one by one.
 
     // Spread = expand values
 
@@ -46,7 +46,7 @@
     // 👉 Spread creates shallow copy
 
     // 🔹 2. Rest Operator (Collect)
-    // 👉 Definition:
+    // 👉 Definition:The rest operator is used to collect multiple values into a single variable (as an array).
 
     // Rest = collect remaining values
 
