@@ -129,7 +129,10 @@ document.querySelector("#child")
 document.querySelector("#anotherdiv")
 .addEventListener("click" , () => {
  console.log("another div")
+
 });
+
+
 
 
 
