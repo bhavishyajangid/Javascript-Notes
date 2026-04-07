@@ -149,7 +149,7 @@ ex :
 //  1.  You click <li>
 //  2. Browser creates a click event on <li> ✅
 //     (even though no listener is attached)
-//  3. Then event goes through phases:
+//  3. Then event goes through phases
 
 
 
