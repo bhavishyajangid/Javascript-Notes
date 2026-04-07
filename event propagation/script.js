@@ -132,6 +132,25 @@ document.querySelector("#anotherdiv")
 
 });
 
+// *************************** Event Deligation *************************
+
+// Event Delegation = attaching a single event listener to a parent instead of multiple listeners on child elements.
+
+ex : 
+    <ul id="parent">
+        <li id="child1">child</li>
+        <li id="child2">child2</li>
+        <li id="child3">child3</li>
+    </ul>
+
+    // if we want to add event listner on all the child then we need to add this seprately but if we add the event listner on the parent then on all the child the event listner is automatically applied and when we clickn on any child element his event bubble up and then the parent event listner is listern this event and excute so this is called the event delegation 
+
+//     Behind the scenes:
+//  1.  You click <li>
+//  2. Browser creates a click event on <li> ✅
+//     (even though no listener is attached)
+//  3. Then event goes through phases:
+
 
 
 
