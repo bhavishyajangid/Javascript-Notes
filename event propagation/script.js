@@ -140,7 +140,7 @@ ex :
     <ul id="parent">
         <li id="child1">child</li>
         <li id="child2">child2</li>
-        <li id="child3">child3</li>
+        <li id="child3">child3</li
     </ul>
 
     // if we want to add event listner on all the child then we need to add this seprately but if we add the event listner on the parent then on all the child the event listner is automatically applied and when we clickn on any child element his event bubble up and then the parent event listner is listern this event and excute so this is called the event delegation 
