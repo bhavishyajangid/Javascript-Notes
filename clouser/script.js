@@ -1,7 +1,7 @@
 // *********************** CLOUSER *******************
 
 
-// clouser is the bundle of the funcation and its parent lexical scope is know as clouser 
+// A function remembers the variables from its outer scope even after the outer function has finished execution.
 
 // EX : - 
         //    function clouser(){
