@@ -30,7 +30,7 @@ let promise2 = new Promise((resolve , reject )=>{
 })
 
 promise2.then(()=>{
-    // console.log("promise resolved");
+    // console.log("promise resolve");
 })
 
  //    this the second method of promise
