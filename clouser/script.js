@@ -1,7 +1,7 @@
 // *********************** CLOUSER *******************
 
 
-// A function remembers the variables from its outer scope even after the outer function has finished execution.
+//    A function remembers the variables from its outer scope even after the outer function has finished execution.
 
 // EX : - 
         //    function clouser(){
