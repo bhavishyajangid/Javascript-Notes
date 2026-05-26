@@ -140,7 +140,7 @@ myData()
 let p1 = fetch ("take 10 sec to resolved")
 let data1 = await p1.json()
 console.log(data1)
-let p2 = fetch ("take 5 sec to resolved")
+let p2 = fetch ("take 5 sec to resolved");
 let data2 = await p2.json()
 console.log(data2)
 
