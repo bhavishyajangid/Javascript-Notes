@@ -47,7 +47,7 @@ document.querySelector("#child")
             // grandparent 
 
 
-// 2. EVENT CAPTURING / TRICKLING :  event capturing is opposite of event bubbling is goes down to up so when we click grandparent then the event listern call like first grand parent then parent then child but this always start from top element like when we click on parent in capturing so then grandparent print then parent 
+// 2. EVENT CAPTURING / TRICKLING :  event capturing is opposite of event bubbling is goes up to down so when we click grandparent then the event listern call like first grand parent then parent then child but this always start from top element like when we click on parent in capturing so then grandparent print then parent 
 
 // event bubbling is used default in all element and for manuplate it use the third paramenter true or false in event listner 
     // false for event bubbling and true is for event capturing 
