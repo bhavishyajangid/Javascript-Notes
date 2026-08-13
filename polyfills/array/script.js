@@ -77,3 +77,73 @@ let newArray = array.myMap(function(element, index, array){
 
 
  // now on this filter we only needto check if the condtion is true then only push the element n the new array and we do it 
+
+
+
+//  ******************** REDUCE *********************
+
+
+Array.prototype.myReduce = function(callback , initialValue){
+
+    let acc = initialValue;
+    for(let i = 0; i < this.length; i++){
+        acc = callback(acc , this[i], i, this)
+    }
+
+    return acc
+}
+
+
+let array = [1, 2, 3, 4, 5];
+
+
+let result = array.myReduce(function(acc , element, index, array){
+    return element * acc;
+} , 1);
+
+ output = 120
+
+
+
+//  ********************** FIND ****************
+  
+Array.prototype.myFind = function(callback){
+    for(let i = 0; i < this.length; i++){
+       if(callback(this[i], i, this)){
+         return this[i]
+       }
+    }
+
+     return undefined;
+}
+
+
+let array = [1, 2, 3, 4, 5];
+
+let newArray = array.myFind(function(element, index, array){
+    return element > 4;
+});
+
+ output = 5
+
+
+//  ****************** SOME***************
+
+Array.prototype.mySome = function(callback){
+    for(let i = 0; i < this.length; i++){
+       if(callback(this[i], i, this)){
+         return true
+       }
+    }
+
+     return false;
+}
+
+
+let array = [1, 2, 3, 4, 5];
+
+let newArray = array.mySome(function(element, index, array){
+    return element > 4;
+});
+
+ output = true
